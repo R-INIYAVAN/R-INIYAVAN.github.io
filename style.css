@@ -2,6 +2,10 @@
     background: white;
 }
 
+h3{
+    margin: 10px;
+}
+
 .wrap{
     width:100%;
     margin: auto;
@@ -13,6 +17,11 @@
     /*overflow-y: hidden;
     -ms-overflow-style: none;   
     scrollbar-width: none;*/
+}
+
+.wrap .buttonimg-left,.wrap .buttonimg-right{
+    align-items: center;
+    justify-content: center;
 }
 
 .wrap::-webkit-scrollbar {
