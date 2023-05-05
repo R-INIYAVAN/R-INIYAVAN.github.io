@@ -102,14 +102,6 @@ h4{
     height: 32px;
 }
 
-.buttonimg-right:hover{
-    opacity: 0.7;
-}
-
-.buttonimg-left:hover{
-    opacity: 0.7;
-}
-
 .hidden {
     display: none;
   }
