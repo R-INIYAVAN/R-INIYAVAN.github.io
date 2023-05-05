@@ -2,8 +2,9 @@
     background: white;
 }
 
-h3{
+h4{
     margin: 10px;
+    padding-top: 10px;
 }
 
 .wrap{
@@ -61,14 +62,15 @@ h3{
 }
 
 .container{
-    padding: 2px 16px;
+    padding: 0px;
     font-size: medium;
 }
 
-.container h4,h5{
+.container h5{
     font-weight: 100;
     margin: 0.5em 0;
     color: #454545;
+    font-size: 93%;
 }
 
 .buttonimg-left{
