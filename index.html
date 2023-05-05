@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Todd Shelton</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h3 style="font-family: sans-serif;">Oxford</h3>
+        <div class="wrap" id="wrap">
+            <div class="card">
+                <img src = "img/jim-dandy-black-26-800x800.jpg" alt="shirt1" style="width: 100%;">
+                <div class="container">
+                    <h4>Oxford</h4>
+                    <h5>Jim dandy black</h5>
+                    <h5>$245</h5>
+                    <button class="button">Buy</button>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src = "img/jim-dandy-blue-stripe-31-800x800.jpg" alt="shirt2" style="width: 100%;">
+                <div class="container">
+                    <h4>Oxford</h4>
+                    <h5>Jim dandy blue stripe</h5>
+                    <h5>$245</h5>
+                    <button class="button">Buy</button>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src = "img/jim-dandy-heritage-blue-12-800x800.jpg" alt="shirt3" style="width: 100%;">
+                <div class="container">
+                    <h4>Oxford</h4>
+                    <h5>Jim dandy heritage blue</h5>
+                    <h5>$245</h5>
+                    <button class="button">Buy</button>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src = "img/jim-dandy-light-grey-35-800x800.jpg" alt="shirt4" style="width: 100%;">
+                <div class="container">
+                    <h4>Oxford</h4>
+                    <h5>Jim dandy light grey</h5>
+                    <h5>$245</h5>
+                    <button class="button">Buy</button>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src = "img/jim-dandy-navy-6-800x800.jpg" alt="shirt5" style="width: 100%;">
+                <div class="container">
+                    <h4>Oxford</h4>
+                    <h5>Jim dandy navy</h5>
+                    <h5>$245</h5>
+                    <button class="button">Buy</button>
+
+                </div>
+            </div>
+            <div class="card">
+                <img src = "img/jim-dandy-olive-16-800x800.jpg" alt="shirt6" style="width: 100%;">
+                <div class="container">
+                    <h4>Oxford</h4>
+                    <h5>Jim dandy olive</h5>
+                    <h5>$245</h5>
+                    <button class="button">Buy</button>
+
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src = "img/jim-dandy-vintage-blue-27-800x800.jpg" alt="shirt7" style="width: 100%;">
+                <div class="container">
+                    <h4>Oxford</h4>
+                    <h5>Jim dandy vintage blue</h5>
+                    <h5>$245</h5>
+                    <button class="button">Buy</button>
+                </div>
+            </div>
+        </div>
+        <img src="img/left.png" alt="back" class="buttonimg-left">
+        <img src="img/right.png" alt="next" class="buttonimg-right">
+
+        <hr style="opacity: 0.3;">
+        <script>
+                const wrap = document.getElementById("wrap");
+                let isDragging = false;
+                let startX, scrollLeft;
+
+                wrap.addEventListener("mousedown", e => {
+                isDragging = true;
+                startX = e.pageX - wrap.offsetLeft;
+                scrollLeft = wrap.scrollLeft;
+            });
+
+                wrap.addEventListener("mouseleave", () => {
+                isDragging = false;
+            });
+
+                wrap.addEventListener("mouseup", () => {
+                isDragging = false;
+            });
+
+                wrap.addEventListener("mousemove", e => {
+                if (!isDragging) return;
+                e.preventDefault();
+                const x = e.pageX - wrap.offsetLeft;
+                const walk = (x - startX)*10;
+                wrap.scrollLeft = scrollLeft - walk;
+            });
+
+                const scrollLeftButton = document.querySelector(".buttonimg-left");
+                const scrollRightButton = document.querySelector(".buttonimg-right");
+
+                scrollLeftButton.addEventListener("click", () => {
+                const wrap = document.getElementById("wrap");
+                wrap.scroll({
+                    left: wrap.scrollLeft - 400,
+                    behavior: "smooth"
+                });
+            });
+
+                scrollRightButton.addEventListener("click", () => {
+                const wrap = document.getElementById("wrap");
+                wrap.scroll({
+                    left: wrap.scrollLeft + 400,
+                    behavior: "smooth"
+                });
+            });
+
+
+        </script>
+    </body>
+</html>
