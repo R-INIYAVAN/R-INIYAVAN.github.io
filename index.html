@@ -94,24 +94,6 @@
                 const x = e.pageX - wrap.offsetLeft;
                 const walk = (x - startX)*10;
                 wrap.scrollLeft = scrollLeft - walk;
-
-  // Check if we're at the leftmost part of the scroll
-                const isLeftmost = wrap.scrollLeft === 0;
-                const leftButton = document.querySelector(".buttonimg-left");
-                if (isLeftmost) {
-                    leftButton.style.visibility = "hidden";
-                } else {
-                    leftButton.style.visibility = "visible";
-                }
-
-  // Check if we're at the rightmost part of the scroll
-                const isRightmost = wrap.scrollLeft + wrap.clientWidth >= wrap.scrollWidth;
-                const rightButton = document.querySelector(".buttonimg-right");
-                if (isRightmost) {
-                    rightButton.style.visibility = "hidden";
-                } else {
-                    rightButton.style.visibility = "visible";
-                }
             });
 
                 const scrollLeftButton = document.querySelector(".buttonimg-left");
@@ -123,19 +105,6 @@
                     left: wrap.scrollLeft - 350,
                     behavior: "smooth"
                 });
-
-  // Check if we're at the leftmost part of the scroll
-                const isLeftmost = wrap.scrollLeft === 0;
-                const leftButton = document.querySelector(".buttonimg-left");
-                if (isLeftmost) {
-                    leftButton.style.visibility = "hidden";
-                } else {
-                    leftButton.style.visibility = "visible";
-                }
-
-  // Make sure the right button is visible
-                const rightButton = document.querySelector(".buttonimg-right");
-                rightButton.style.visibility = "visible";
             });
 
                 scrollRightButton.addEventListener("click", () => {
@@ -144,24 +113,6 @@
                     left: wrap.scrollLeft + 350,
                     behavior: "smooth"
                 });
-
-  // Check if we're at the rightmost part of the scroll
-                const isRightmost = wrap.scrollLeft + wrap.clientWidth >= wrap.scrollWidth;
-                const rightButton = document.querySelector(".buttonimg-right");
-                if (isRightmost) {
-                    rightButton.style.visibility = "hidden";
-                } else {
-                    rightButton.style.visibility = "visible";
-                }
-
-  // Make sure the left button is visible
-                const leftButton = document.querySelector(".buttonimg-left");
-                leftButton.style.visibility = "visible";
-  
-  // Check if we're at the leftmost part of the scroll
-                if (wrap.scrollLeft === 0) {
-                    leftButton.style.visibility = "hidden";
-                }
             });
 
 
